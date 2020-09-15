@@ -12,7 +12,7 @@ class ArtistsController < ApplicationController
   end
 
   def create
-    @artist = Artist.new(params)
+    @artist = Artist.new(artist_params)
     @artist.save
     redirect_to artist_path(@artist)
   end
@@ -29,7 +29,7 @@ class ArtistsController < ApplicationController
 
   private
 
-  def post_params(*args)
+  def artist_params(*args)
     params.require(:artist).permit(*args)
   end
 end

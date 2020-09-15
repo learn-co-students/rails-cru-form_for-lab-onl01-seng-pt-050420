@@ -1,4 +1,4 @@
-class GenreController < ApplicationController
+class GenresController < ApplicationController
   def index
     @genres = Genre.all
   end
@@ -29,7 +29,7 @@ class GenreController < ApplicationController
 
   private
 
-  def post_params(*args)
+  def genre_params(*args)
     params.require(:genre).permit(*args)
   end
 end
