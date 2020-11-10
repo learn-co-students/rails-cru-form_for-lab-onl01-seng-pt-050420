@@ -7,13 +7,7 @@ Rails.application.routes.draw do
 
   get 'genres/creat'
 
-  get 'genres/edit'
 
-  get 'genres/show'
-
-  get 'song/create'
-
-  get 'song/update'
 
   get 'song/show'
 
